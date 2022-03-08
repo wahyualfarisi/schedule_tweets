@@ -1,0 +1,12 @@
+<h6> Forgot the password ? </h6>
+
+<%= form_with url: password_reset_path do |form| %>
+    <div class="mb-3">
+        <%= form.label "Email" %>
+        <%= form.text_field "email", class: "form-control", placeholder: "enter your email" %>
+    </div>
+
+    <div>
+        <%= form.submit "Reset", data: { turbo: false }, class: "btn btn-primary" %>
+    </div>
+<% end %>
